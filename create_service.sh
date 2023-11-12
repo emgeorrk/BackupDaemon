@@ -26,3 +26,4 @@ WantedBy=multi-user.target
 EOF
 
 chmod 664 /etc/systemd/system/backupdaemon.service
+systemctl daemon-reload
