@@ -44,6 +44,7 @@ void readConfig(std::string& sourceDirectory, std::string& backupDirectory, unsi
             }
         }
     }
+    config.close();
 }
 
 
