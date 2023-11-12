@@ -4,7 +4,7 @@
 ```yaml
 sourceDirectory: /home/user/mydir
 backupDirectory: /home/user/mydir_backups
-frequency: minutely/hourly/daily/monthly
+frequency: minutely/hourly/daily/monthly   # choose one
 ```
 2. Run `create_service.sh` script:
 ```bash
