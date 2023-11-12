@@ -2,8 +2,8 @@
 ### Installation
 1. Fill in the `config.yaml` as follows:
 ```yaml
-sourceDirectory: /home/user/backupdaemon/directory
-backupDirectory: /home/user/backupdaemon/backup_directory
+sourceDirectory: /home/user/mydir
+backupDirectory: /home/user/mydir_backups
 frequency: minutely/hourly/daily/monthly
 ```
 2. Run `create_service.sh` script:
