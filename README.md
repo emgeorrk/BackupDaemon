@@ -8,7 +8,7 @@ frequency: minutely/hourly/daily/monthly   # choose one
 ```
 2. Run `create_service.sh` script:
 ```bash
-root sh create_service.sh
+sudo sh create_service.sh
 ```
 ### Usage
 ```bash
