@@ -27,3 +27,4 @@ EOF
 
 chmod 664 /etc/systemd/system/backupdaemon.service
 systemctl daemon-reload
+echo "Script finished"
