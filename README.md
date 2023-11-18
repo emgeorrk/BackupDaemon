@@ -7,7 +7,7 @@ backupDirectory: /home/user/mydir_backups
 frequency: minutely/hourly/daily/monthly   # choose one
 ```
 2. Run `create_service.sh` script:
-```command
+```bash
 sudo sh create_service.sh
 ```
 ### Usage
