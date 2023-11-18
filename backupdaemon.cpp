@@ -44,7 +44,6 @@ void readConfig(std::string& sourceDirectory, std::string& backupDirectory, unsi
             }
         }
     }
-    config.close();
 }
 
 
@@ -63,7 +62,7 @@ std::string getDirectoryName(const std::string& path) {
 }
 
 
-void backupDaemon(const std::string& sourceDirectory, const std::string& backupDirectory) {
+void backupDaemon(const std::string& sourceDirectory, const std::string& backupDirectory, unsigned &frequency) {
     while (true) {
         std::string backupFolder = backupDirectory + "/" + getDirectoryName(sourceDirectory) + "_backup " + getCurrentTime();
 
@@ -76,7 +75,7 @@ void backupDaemon(const std::string& sourceDirectory, const std::string& backupD
 
         syslog(LOG_INFO, "Backup created successfully: %s", backupFolder.c_str());
 
-        std::this_thread::sleep_for(std::chrono::minutes(1));
+        std::this_thread::sleep_for(std::chrono::minutes(frequency));
     }
 }
 
@@ -92,7 +91,7 @@ int main() {
 
     readConfig(sourceDirectory, backupDirectory, frequency);
 
-    backupDaemon(sourceDirectory, backupDirectory);
+    backupDaemon(sourceDirectory, backupDirectory, frequency);
 
     return 0;
 }
